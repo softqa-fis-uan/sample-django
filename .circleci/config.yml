@@ -10,7 +10,7 @@ orbs:
 jobs:
   build_and_test:
     executor: python/default # use the default executor defined within the orb
-    tag: ‘3.11’
+    tag: "3.11"
     steps:
       - checkout # checkout source code
       - python/install-packages:
