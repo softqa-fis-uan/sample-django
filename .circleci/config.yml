@@ -9,7 +9,8 @@ orbs:
 # See: https://circleci.com/docs/jobs-steps/#jobs-overview & https://circleci.com/docs/configuration-reference/#jobs
 jobs:
   build_and_test:
-    executor: python/default # use the default executor defined within the orb
+    docker:
+      - image: cimg/python:3.12.3
     steps:
       - checkout # checkout source code
       - python/install-packages:
